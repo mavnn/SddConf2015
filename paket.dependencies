@@ -2,3 +2,5 @@ source https://nuget.org/api/v2
 
 nuget FsCheck prerelease
 nuget NUnit
+
+github xyncro/chiron:f512dd48db6c44053fda6aa877e0df2589632cc4

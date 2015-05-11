@@ -52,12 +52,12 @@ let inline roundTrip (thing : 'a) : 'a =
   |> Json.deserialize
 
 type Properties =
-  (*
   static member ``Strings can be round tripped`` (str : string) =
     roundTrip str = str
-  *)
+  (*
   static member ``Strings can be round tripped`` (str : NonNull<string>) =
     let s = str.Get
     roundTrip s = s
+  *)
 
 FsCheck.Check.All<Properties>(FsCheck.Config.Quick)

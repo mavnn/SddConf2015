@@ -124,7 +124,7 @@ namespace PhoneNumbers.Test
         public static void test_TryCreate()
         {
             Arb.Register<CustomArbs>();
-            Check.VerboseThrowOnFailureAll<ValidE164Properties>();
+            Check.QuickThrowOnFailureAll<ValidE164Properties>();
         }
     }
 }

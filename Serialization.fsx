@@ -43,12 +43,31 @@ let ``Json.format returns correct values`` () =
 
 // Let's add our properties!
 open FsCheck
+open Chiron.Operators
 
 let inline roundTrip (thing : 'a) : 'a =
   Json.serialize thing
   |> Json.format
   |> Json.parse
   |> Json.deserialize
+
+(*
+type TestRecord =
+    {
+        StringField : string
+        GuidField : System.Guid
+        NumberField : int
+    }
+    static member FromJson (_ : TestRecord) =
+            fun s g d -> { StringField = s; GuidField = g; NumberField = d }
+        <!> Json.read "stringField"
+        <*> Json.read "guidField"
+        <*> Json.read "numberField"
+    static member ToJson { StringField = s; GuidField = g; NumberField = d } =
+        Json.write "stringField" s
+        *> Json.write "guidField" g
+        *> Json.write "numberField" d
+*)
 
 type Properties =
   static member ``Strings can be round tripped`` (str : string) =
@@ -58,5 +77,20 @@ type Properties =
     let s = str.Get
     roundTrip s = s
   *)
+  (*
+  static member ``Records can be round tripped`` (t : TestRecord) =
+    roundTrip t = t
+  *)
 
 FsCheck.Check.All<Properties>(FsCheck.Config.Quick)
+
+(*
+type MyArbs =
+  static member String () =
+    FsCheck.Arb.Default.NonNull()
+    |> FsCheck.Arb.convert
+        (fun nonNull -> nonNull.Get)
+        (fun (str : string) -> FsCheck.NonNull str)
+
+FsCheck.Check.All<Properties>({ FsCheck.Config.Quick with Arbitrary = [typeof<MyArbs>] })
+*)

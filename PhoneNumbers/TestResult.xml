@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="c:\rip\SddConf.Properties\PhoneNumbers\bin\Debug\PhoneNumbers.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-05-08" time="11:27:41">
+<test-results name="c:\rip\SddConf.Properties\PhoneNumbers\bin\Debug\PhoneNumbers.dll" total="1" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-05-13" time="08:13:27">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.8000" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="c:\rip\SddConf.Properties\PhoneNumbers" machine-name="FREDONIA" user="Michael.Newton" user-domain="15BELOW" />
   <culture-info current-culture="en-GB" current-uiculture="en-US" />
-  <test-suite type="Assembly" name="c:\rip\SddConf.Properties\PhoneNumbers\bin\Debug\PhoneNumbers.dll" executed="True" result="Failure" success="False" time="1.084" asserts="0">
+  <test-suite type="Assembly" name="c:\rip\SddConf.Properties\PhoneNumbers\bin\Debug\PhoneNumbers.dll" executed="True" result="Failure" success="False" time="0.956" asserts="0">
     <results>
-      <test-suite type="Namespace" name="PhoneNumbers" executed="True" result="Failure" success="False" time="1.066" asserts="0">
+      <test-suite type="Namespace" name="PhoneNumbers" executed="True" result="Failure" success="False" time="0.938" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Test" executed="True" result="Failure" success="False" time="1.065" asserts="0">
+          <test-suite type="Namespace" name="Test" executed="True" result="Failure" success="False" time="0.938" asserts="0">
             <results>
-              <test-suite type="TestFixture" name="ValidE164Tests" executed="True" result="Failure" success="False" time="1.062" asserts="0">
+              <test-suite type="TestFixture" name="ValidE164Tests" executed="True" result="Failure" success="False" time="0.935" asserts="0">
                 <results>
-                  <test-case name="PhoneNumbers.Test.ValidE164Tests.test_TryCreate" executed="True" result="Error" success="False" time="1.049" asserts="0">
+                  <test-case name="PhoneNumbers.Test.ValidE164Tests.test_TryCreate" executed="True" result="Error" success="False" time="0.923" asserts="0">
                     <failure>
                       <message><![CDATA[System.Reflection.TargetInvocationException : Exception has been thrown by the target of an invocation.
-  ----> System.Exception : ValidE164Properties.InvalidNumbersAreInvalid-Falsifiable, after 1 test (0 shrinks) (StdGen (248418509,296005439)):
-Label of failing property: +109151026215734373548485959606021717282809393040
-< +109151026215734373548485959606021717282809393040 >
+  ----> System.Exception : ValidE164Properties.InvalidNumbersAreInvalid-Falsifiable, after 1 test (0 shrinks) (StdGen (1082970080,296007396)):
+Label of failing property: +217939824093510462651376248737954806592
+< +217939824093510462651376248737954806592 >
 ]]></message>
                       <stack-trace><![CDATA[at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor)
 at System.Reflection.RuntimeMethodInfo.UnsafeInvokeInternal(Object obj, Object[] parameters, Object[] arguments)

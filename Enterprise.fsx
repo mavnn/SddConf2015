@@ -18,6 +18,23 @@ let add doc command =
   xdoc.Root.Add node
   xdoc.ToString()
 
+(*
+let add doc command =
+  let xdoc = XDocument.Parse doc
+  let enhancements = xdoc.Descendants(XName.Get "Enhancement")
+  let exists =
+    enhancements
+    |> Seq.exists (fun x -> Guid(x.Attribute(XName.Get "Command").Value) = command.Guid)
+  if exists then
+    doc
+  else
+    let node = XElement(XName.Get "Enhancement", command.Content)
+    node.SetAttributeValue(XName.Get "Command", command.Guid)
+    xdoc.Root.Add node
+    xdoc.ToString()
+*)
+
+
 // Testing!
 open FsCheck
 

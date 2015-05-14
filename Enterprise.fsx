@@ -41,14 +41,14 @@ open FsCheck
 let empty = "<root />"
 
 type Properties =
-  static member ``It doesn't crash`` command =
-    add empty command
-    true
-  (*
   static member ``Add commands should be idempotent`` command =
     let doc1 = add empty command
     let doc2 = add (add empty command) command
     doc1 = doc2
+  (*
+  static member ``It doesn't crash`` command =
+    add empty command
+    true
   *)
   (*
   static member ``Add commands should never reduce the document size`` commands =
